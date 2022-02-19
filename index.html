@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./BS pack/bootstrap.min.css">
+    <title>Expense Frontend</title>
+</head>
+<body>
+    <main class="container mb-4">
+        <h3 class="display-4 text-center my-3">Exercise Tracker</h3>
+        <div class="card shadow">
+            <div class="card-body">
+                <p class="lead">Create User</p>
+                <p class="text-monospace bg-info text-light rounded p-2 d-inline-block">POST /api/users</p>
+                <form>
+                    <input type="text" name="username" class="form-control username" placeholder="Username" id="">
+                    <button type='submit' class="btn btn-sm btn-primary my-3 submitUser">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+        <!-- Add exercise -->
+        <div class="card my-5 shadow">
+            <div class="card-body">
+                <p class="lead">Add exercise</p>
+                <p class="text-monospace bg-info text-light rounded p-2 d-inline-block">POST /api/users/:id/exercise</p>
+                <form>
+                    <input type="text" class="form-control mb-2 id" placeholder="ID" name="id">
+                    <input type="text" class="form-control mb-2 description" placeholder="Description" name="description" id="">
+                    <input type="text" class="form-control mb-2 duration" placeholder="Duration" name="duration" id="">
+                    <input type="date" class="form-control mb-2 date" placeholder="Date" name="date" id="">
+                    <button class="btn btn-sm btn-secondary updateBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- GET all USERS -->
+        <hr>
+        <div>
+            <button class="btn btn-success getAll">GET ALL USERS</button>
+        </div>
+        <div class="box mt-3">
+
+        </div>
+    </main>
+
+    <script src="./BS pack/jquery.slim.min.js"></script>
+    <script src="./BS pack/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
